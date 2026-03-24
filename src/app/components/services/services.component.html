@@ -1,0 +1,21 @@
+<section id="leistungen" class="section">
+  <div class="container">
+    <div class="section-header" appScrollAnimate>
+      <h2>Leistungen</h2>
+      <p>Alles aus einer Hand – von der ersten Idee bis zum fertigen Produkt.</p>
+    </div>
+
+    <div class="services-grid">
+      @for (service of services; track service.title; let i = $index) {
+        <div class="service-card" appScrollAnimate [animationDelay]="(i * 100) + 'ms'">
+          <div class="card-badge">{{ service.badge }}</div>
+          <div class="service-icon-box">
+            <span>{{ service.icon }}</span>
+          </div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

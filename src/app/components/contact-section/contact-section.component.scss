@@ -1,0 +1,169 @@
+@use '../../../styles/variables' as *;
+
+.contact-section {
+  padding: 96px 24px;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 48px;
+
+  h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    color: #0F172A;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 16px;
+    color: #64748B;
+    line-height: 1.65;
+    max-width: 520px;
+    margin: 0;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .optional {
+    font-weight: 400;
+    color: #94A3B8;
+  }
+
+  input, textarea {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    color: #0F172A;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: none;
+
+    &::placeholder {
+      color: #94A3B8;
+    }
+
+    &:focus {
+      border-color: #4338CA;
+      box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.08);
+      background: #ffffff;
+    }
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.calendly-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.calendly-card {
+  width: 100%;
+  padding: 40px 32px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  background: #F8FAFC;
+  text-align: center;
+
+  .calendly-logo {
+    margin-bottom: 20px;
+
+    .cal-icon {
+      font-size: 40px;
+    }
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.65;
+    margin: 0 0 28px;
+  }
+}
+
+.calendly-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.success-message {
+  text-align: center;
+  padding: 48px 24px;
+
+  .success-icon {
+    width: 64px;
+    height: 64px;
+    background: $gradient-brand;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    margin: 0 auto 20px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 8px;
+  }
+
+  p {
+    color: #64748B;
+    margin: 0;
+  }
+}

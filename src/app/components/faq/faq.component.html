@@ -1,0 +1,23 @@
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-header" appScrollAnimate>
+      <span class="section-label">FAQ</span>
+      <h2>Häufige Fragen</h2>
+    </div>
+
+    <div class="faq-list">
+      @for (faq of faqs; track faq.question; let i = $index) {
+        <div class="faq-item" appScrollAnimate [animationDelay]="(i * 80) + 'ms'"
+             [class.open]="openIndex() === i">
+          <button class="faq-question" (click)="toggle(i)">
+            <span>{{ faq.question }}</span>
+            <span class="faq-icon">{{ openIndex() === i ? '−' : '+' }}</span>
+          </button>
+          @if (openIndex() === i) {
+            <div class="faq-answer">{{ faq.answer }}</div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>

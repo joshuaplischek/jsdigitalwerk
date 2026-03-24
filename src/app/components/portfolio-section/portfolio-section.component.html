@@ -1,0 +1,50 @@
+<section id="referenzen" class="section">
+  <div class="container">
+    <div class="section-header" appScrollAnimate>
+      <h2>Referenzen</h2>
+      <p>High-quality websites and modern website per project.</p>
+    </div>
+
+    <div class="carousel" appScrollAnimate animationDelay="100ms">
+      <!-- Main Image Area -->
+      <div class="carousel-image">
+        <div class="mockup-screen">
+          <div class="browser-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="url-bar">jsdigitalwerk.de/{{ current.title.toLowerCase().replace(' ', '-') }}</div>
+          </div>
+          <div class="mockup-content" [style.background]="'linear-gradient(135deg, ' + current.color + '22, ' + current.color + '11)'">
+            <div class="mockup-logo" [style.background]="current.color">{{ current.initial }}</div>
+            <div class="mockup-lines">
+              <div class="mockup-line wide"></div>
+              <div class="mockup-line medium"></div>
+              <div class="mockup-line short"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button class="arrow arrow-left" (click)="prev()">←</button>
+        <button class="arrow arrow-right" (click)="next()">→</button>
+      </div>
+
+      <!-- Project Info -->
+      <div class="carousel-info">
+        <div class="project-tags">
+          @for (tag of current.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+          }
+        </div>
+        <h3>{{ current.title }}</h3>
+        <p>{{ current.description }}</p>
+
+        <!-- Dots -->
+        <div class="dots">
+          @for (p of projects; track p.title; let i = $index) {
+            <button class="dot-btn" [class.active]="currentIndex() === i" (click)="currentIndex.set(i)"></button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

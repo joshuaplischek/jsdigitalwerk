@@ -1,0 +1,57 @@
+<section id="kontakt" class="contact-section">
+  <div class="container">
+    <div class="section-header" appScrollAnimate>
+      <h2>Bereit für eure neue Website?</h2>
+      <p>Lasst uns in einem kostenlosen Erstgespräch herausfinden, wie wir euer Handwerk digital sichtbar machen.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Form -->
+      <div class="contact-form-wrapper" appScrollAnimate>
+        @if (!submitted) {
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" formControlName="name" placeholder="Euer Name">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" formControlName="email" placeholder="eure@email.de">
+            </div>
+            <div class="form-group">
+              <label>Telefon <span class="optional">(optional)</span></label>
+              <input type="tel" formControlName="telefon" placeholder="+49 000 000 0000">
+            </div>
+            <div class="form-group">
+              <label>Projekt Details</label>
+              <textarea formControlName="projektdetails" rows="4" placeholder="Erzählt uns von eurem Projekt..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary submit-btn">
+              Nachricht senden
+            </button>
+          </form>
+        } @else {
+          <div class="success-message">
+            <div class="success-icon">✓</div>
+            <h3>Nachricht gesendet!</h3>
+            <p>Wir melden uns innerhalb von 24 Stunden bei euch.</p>
+          </div>
+        }
+      </div>
+
+      <!-- Calendly Placeholder -->
+      <div class="calendly-wrapper" appScrollAnimate animationDelay="150ms">
+        <div class="calendly-card">
+          <div class="calendly-logo">
+            <div class="cal-icon">📅</div>
+          </div>
+          <h3>Direkt einen Termin buchen</h3>
+          <p>Kein hin und her per E-Mail – bucht einfach direkt einen kostenlosen 30-Minuten-Termin mit uns.</p>
+          <button class="btn-primary calendly-btn">
+            Calendly Meeting Buchen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

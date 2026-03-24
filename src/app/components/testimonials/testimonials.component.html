@@ -1,0 +1,24 @@
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header" appScrollAnimate>
+      <span class="section-label">Kundenstimmen</span>
+      <h2>Was unsere Kunden sagen</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      @for (t of testimonials; track t.name; let i = $index) {
+        <div class="testimonial-card" appScrollAnimate [animationDelay]="(i * 100) + 'ms'">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"{{ t.quote }}"</p>
+          <div class="author">
+            <div class="avatar">{{ t.initials }}</div>
+            <div class="author-info">
+              <div class="author-name">{{ t.name }}</div>
+              <div class="author-role">{{ t.role }}, {{ t.company }}</div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
