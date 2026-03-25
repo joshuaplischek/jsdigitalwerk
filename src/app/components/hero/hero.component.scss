@@ -4,32 +4,15 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  @include blueprint-grid;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
 }
 
-.orb {
+app-particle-canvas {
   position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(80px);
-
-  &-1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(67, 56, 202, 0.12), transparent 70%);
-    top: -150px;
-    right: -100px;
-  }
-
-  &-2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(13, 148, 136, 0.1), transparent 70%);
-    bottom: -80px;
-    left: 40%;
-  }
+  inset: 0;
+  z-index: 0;
 }
 
 .hero-section {

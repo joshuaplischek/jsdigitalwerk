@@ -1,7 +1,12 @@
 <div class="hero-wrapper">
-  <!-- Background orbs -->
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
+  <app-particle-canvas
+    bgColor="#FFFFFF"
+    particleColor="rgba(67, 56, 202, 0.25)"
+    lineColor="rgba(67, 56, 202,"
+    lineColorHover="rgba(13, 148, 136,"
+    [lineOpacityMultiplier]="0.3"
+    [lineOpacityMultiplierHover]="0.5"
+  />
 
   <section id="hero" class="hero-section">
     <div class="hero-content">
