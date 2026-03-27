@@ -13,25 +13,34 @@ export class PortfolioSectionComponent {
 
   projects = [
     {
-      title: 'Müller Sanitär GmbH',
-      description: 'Komplette Neugestaltung der Website mit Terminbuchungssystem und Kundenverwaltung.',
-      tags: ['Webdesign', 'Webapp'],
-      initial: 'M',
+      title: 'Brandschutz Schräder',
+      tags: ['Webdesign', 'Lokales SEO'],
+      description: 'Neuer Webauftritt für ein Familienunternehmen mit über 45 Jahren Erfahrung im Brandschutz. Klare Struktur, modernes Design und Fokus auf lokale Sichtbarkeit.',
+      result: 'Erste Anfragen nach einer Woche – ohne Werbung.',
+      url: 'https://brandschutzschraeder.de/',
+      domain: 'brandschutzschraeder.de',
+      initial: 'B',
+      color: '#DC2626'
+    },
+    {
+      title: 'Schönenbach Steinteppich',
+      tags: ['Webdesign', 'Conversion-Optimierung'],
+      description: 'Komplette Website-Überarbeitung für einen Steinteppich-Fachbetrieb. Fokus auf qualifizierte Kundenanfragen – mit klarer Nutzerführung und optimiertem Kontaktformular.',
+      result: 'Deutlich bessere Anfragen, mehr Aufträge über Online-Kontakt.',
+      url: 'https://www.schoenenbach-steinteppich.de/',
+      domain: 'schoenenbach-steinteppich.de',
+      initial: 'S',
       color: '#4338CA'
     },
     {
-      title: 'Elektro Hoffmann',
-      description: 'Modernes Branding und responsiver Webauftritt mit Kontaktformular und Google Maps Integration.',
-      tags: ['Branding', 'Webdesign'],
-      initial: 'E',
+      title: 'Febrix Projekt',
+      tags: ['Webdesign', 'Branding'],
+      description: 'Website für einen frisch gegründeten CAD-Dienstleister. Professioneller Auftritt ab Tag eins, der Kompetenz ausstrahlt und erste Kunden überzeugt.',
+      result: 'Starker erster Eindruck trotz Neugründung.',
+      url: 'https://febrix-projekt.de/',
+      domain: 'febrix-projekt.de',
+      initial: 'F',
       color: '#0D9488'
-    },
-    {
-      title: 'Schreinerei Bauer',
-      description: 'Portfolio-Website mit Galerie, Referenzen und interaktiver Konfiguration für Maßmöbel.',
-      tags: ['Webdesign', 'Galerie'],
-      initial: 'S',
-      color: '#7C3AED'
     }
   ];
 

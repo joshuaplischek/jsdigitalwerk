@@ -15,7 +15,7 @@ export class AboutTeamComponent {
       name: 'Joshua Plischek',
       role: 'Entwicklung & Design',
       tags: ['Frontend', 'UI/UX', 'Angular'],
-      bio: 'Entwickler und Designer aus Leidenschaft. Bringt Handwerksbetriebe mit modernster Technologie ins Netz.',
+      bio: 'Baut Websites, seit er 15 ist. Heute macht er das hauptberuflich – mit dem Anspruch, dass sich jeder Handwerker im Netz so gut präsentiert, wie seine Arbeit es verdient.',
       fact: 'Baut nachts Webapps, tagsüber Ideen.'
     },
     {
@@ -23,7 +23,7 @@ export class AboutTeamComponent {
       name: 'Simeon Gießbrecht',
       role: 'Akquise & Marketing',
       tags: ['SEO', 'Branding', 'Sales'],
-      bio: 'Stratege und Netzwerker. Findet für jeden Betrieb die passende digitale Stimme und bringt sie ans Licht.',
+      bio: 'Wenn Simeon einen Handwerksbetrieb sieht, der online unsichtbar ist, juckt es ihm in den Fingern. Er sorgt dafür, dass die richtigen Kunden euch finden.',
       fact: 'Verwandelt Handwerker in digitale Marken.'
     }
   ];

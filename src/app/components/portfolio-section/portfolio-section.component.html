@@ -2,7 +2,7 @@
   <div class="container">
     <div class="section-header" appScrollAnimate>
       <h2>Referenzen</h2>
-      <p>High-quality websites and modern website per project.</p>
+      <p>Ein Auszug unserer bisherigen Projekte – von der Neugründung bis zum etablierten Betrieb.</p>
     </div>
 
     <div class="carousel" appScrollAnimate animationDelay="100ms">
@@ -11,7 +11,7 @@
         <div class="mockup-screen">
           <div class="browser-bar">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            <div class="url-bar">jsdigitalwerk.de/{{ current.title.toLowerCase().replace(' ', '-') }}</div>
+            <div class="url-bar">{{ current.domain }}</div>
           </div>
           <div class="mockup-content" [style.background]="'linear-gradient(135deg, ' + current.color + '22, ' + current.color + '11)'">
             <div class="mockup-logo" [style.background]="current.color">{{ current.initial }}</div>
@@ -37,6 +37,8 @@
         </div>
         <h3>{{ current.title }}</h3>
         <p>{{ current.description }}</p>
+        <p class="result-text">✓ {{ current.result }}</p>
+        <a [href]="current.url" target="_blank" rel="noopener" class="visit-link">Website besuchen →</a>
 
         <!-- Dots -->
         <div class="dots">

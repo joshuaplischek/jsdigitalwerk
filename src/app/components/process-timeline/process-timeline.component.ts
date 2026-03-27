@@ -10,9 +10,9 @@ import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.d
 })
 export class ProcessTimelineComponent {
   steps = [
-    { number: '01', title: 'Erstgespräch', description: 'Wir lernen euer Handwerk kennen und verstehen, was ihr braucht.' },
-    { number: '02', title: 'Konzept & Design', description: 'Wireframes und Designentwürfe, abgestimmt auf eure Wünsche.' },
-    { number: '03', title: 'Entwicklung', description: 'Sauberer Code, moderne Technologie, schnelle Umsetzung.' },
-    { number: '04', title: 'Launch & Support', description: 'Go-Live und laufende Betreuung – wir lassen euch nicht allein.' }
+    { number: '01', title: 'Erstgespräch', description: 'Wir hören zu. Was macht euren Betrieb aus? Was nervt euch gerade online? Daraus machen wir einen Plan.' },
+    { number: '02', title: 'Konzept & Design', description: 'Ihr seht erste Entwürfe und sagt, was gefällt und was nicht. Kein Fachchinesisch – wir reden Klartext.' },
+    { number: '03', title: 'Entwicklung', description: 'Wir bauen. Ihr könnt zugucken – oder einfach weiterarbeiten. Wir melden uns, wenn\'s was zu sehen gibt.' },
+    { number: '04', title: 'Launch & Support', description: 'Eure neue Website geht live. Und danach? Sind wir weiterhin da – Updates, Fragen, Wünsche.' }
   ];
 }

@@ -14,19 +14,19 @@ export class ServicesComponent {
       badge: 'Webdesign & Landingpages',
       icon: '🖥',
       title: 'Webdesign & Landingpages',
-      description: 'Individuelle, responsive Websites, die auf jedem Gerät perfekt aussehen und Kunden überzeugen.'
+      description: 'Eine Website, auf die ihr stolz seid. Responsive, schnell, und so gebaut, dass Kunden euch anrufen statt weiterzuscrollen.'
     },
     {
       badge: 'Individuelle Webapps',
       icon: '⚙',
       title: 'Individuelle Webapps',
-      description: 'Maßgeschneiderte Anwendungen – Terminbuchung, Angebotserstellung, Kundenverwaltung.'
+      description: 'Terminbuchung, die eure Kunden selbst hinkriegen. Angebotserstellung per Klick statt per Zettel. Tools, die euren Alltag leichter machen.'
     },
     {
       badge: 'Logo & Branding',
       icon: '✦',
       title: 'Logo & Branding',
-      description: 'Ein einheitliches Erscheinungsbild, das im Kopf bleibt – vom Logo bis zur Visitenkarte.'
+      description: 'Vom Logo über die Visitenkarte bis zum Firmenwagen – ein Auftritt, der sagt: Hier arbeiten Profis.'
     }
   ];
 }

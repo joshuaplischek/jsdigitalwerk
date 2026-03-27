@@ -1,0 +1,21 @@
+@if (consent.showBanner()) {
+  <div class="cookie-banner">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <p>
+          Wir nutzen Cookies, um diese Website zu verbessern. Analyse-Cookies (Google Analytics)
+          setzen wir nur mit eurer Zustimmung ein.
+          <a routerLink="/datenschutz">Mehr erfahren</a>
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn-necessary" (click)="consent.acceptNecessary()">
+          Nur notwendige
+        </button>
+        <button class="btn-accept" (click)="consent.acceptAll()">
+          Alle akzeptieren
+        </button>
+      </div>
+    </div>
+  </div>
+}

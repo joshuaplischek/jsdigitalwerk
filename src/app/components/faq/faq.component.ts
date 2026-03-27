@@ -14,23 +14,23 @@ export class FaqComponent {
   faqs = [
     {
       question: 'Was kostet eine Website?',
-      answer: 'Jedes Projekt ist individuell. Nach einem kostenlosen Erstgespräch erstellen wir ein transparentes Angebot – keine versteckten Kosten.'
+      answer: 'Kommt drauf an, was ihr braucht – aber wir reden immer erst, bevor wir rechnen. Im Erstgespräch klären wir euren Bedarf und ihr bekommt danach ein transparentes Angebot. Keine versteckten Kosten, versprochen.'
     },
     {
       question: 'Wie lange dauert ein Projekt?',
-      answer: 'Eine Standard-Website ist in 2-4 Wochen fertig. Komplexere Webapps können 4-8 Wochen dauern.'
+      answer: 'Eine klassische Website steht in 2-4 Wochen. Wenn\'s komplexer wird – zum Beispiel mit Terminbuchung oder Kundenverwaltung – rechnet mit 4-8 Wochen. Wir halten euch auf dem Laufenden.'
     },
     {
       question: 'Brauche ich technisches Wissen?',
-      answer: 'Nein. Wir übernehmen alles Technische. Ihr müsst nur wissen, was ihr euren Kunden erzählen wollt.'
+      answer: 'Null. Wir kümmern uns um die Technik, ihr kümmert euch ums Handwerk. Ihr müsst uns nur erzählen, was euer Betrieb macht und was eure Kunden wissen sollen – den Rest machen wir.'
     },
     {
       question: 'Bietet ihr auch laufende Betreuung an?',
-      answer: 'Ja. Wir bieten Wartungspakete an, damit eure Website immer aktuell, sicher und schnell bleibt.'
+      answer: 'Klar. Websites brauchen Pflege – Updates, Sicherheit, kleine Änderungen. Wir bieten Wartungspakete an, damit ihr euch um nichts kümmern müsst.'
     },
     {
       question: 'Was unterscheidet euch von anderen Agenturen?',
-      answer: 'Wir sind selbst Handwerker – nur digital. Keine Vorlagen von der Stange, sondern maßgeschneiderte Lösungen mit modernster Technologie.'
+      answer: 'Wir arbeiten ausschließlich mit Handwerksbetrieben. Dadurch verstehen wir eure Sprache, eure Kunden und eure Abläufe. Und: Ihr redet immer direkt mit uns – keine Callcenter, keine Ticket-Systeme.'
     }
   ];
 

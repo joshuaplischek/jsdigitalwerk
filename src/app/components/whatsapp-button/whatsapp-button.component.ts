@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <a href="https://wa.me/49000000000" target="_blank" class="whatsapp-fab" title="WhatsApp">
+    <a href="https://wa.me/4915159102629" target="_blank" class="whatsapp-fab" title="WhatsApp">
       💬
     </a>
   `,

@@ -185,7 +185,26 @@
     font-size: 15px;
     color: #64748B;
     line-height: 1.65;
-    margin: 0 0 28px;
+    margin: 0 0 12px;
+  }
+
+  .result-text {
+    font-size: 14px;
+    color: #0D9488;
+    font-style: italic;
+    margin: 0 0 20px;
+  }
+
+  .visit-link {
+    display: inline-block;
+    color: #4338CA;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 28px;
+    transition: color 0.2s ease;
+
+    &:hover { color: #0D9488; }
   }
 }
 
