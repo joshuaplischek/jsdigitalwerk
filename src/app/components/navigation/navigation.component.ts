@@ -1,5 +1,6 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { Component, HostListener, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -12,9 +13,19 @@ export class NavigationComponent {
   isScrolled = signal(false);
   isMobileMenuOpen = signal(false);
 
+  private router = inject(Router);
+
   @HostListener('window:scroll')
   onScroll() {
     this.isScrolled.set(window.scrollY > 20);
+  }
+
+  navigateHome() {
+    if (this.router.url === '/') {
+      this.scrollTo('hero');
+    } else {
+      this.router.navigate(['/']);
+    }
   }
 
   scrollTo(sectionId: string) {
