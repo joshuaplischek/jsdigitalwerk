@@ -3,6 +3,10 @@
 .contact-section {
   padding: 96px 24px;
   background: #ffffff;
+
+  @media (max-width: 640px) {
+    padding: 64px 16px;
+  }
 }
 
 .container {
@@ -34,14 +38,16 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
+  grid-template-columns: 1fr;
+}
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+.contact-form-wrapper {
+  max-width: 640px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .contact-form {
@@ -77,6 +83,8 @@
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
     resize: none;
+    width: 100%;
+    box-sizing: border-box;
 
     &::placeholder {
       color: #94A3B8;
@@ -88,54 +96,49 @@
       background: #ffffff;
     }
   }
+
+  &.has-error input,
+  &.has-error textarea {
+    border-color: #EF4444;
+
+    &:focus {
+      border-color: #EF4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    }
+  }
+}
+
+.required {
+  color: #EF4444;
+  margin-left: 2px;
+}
+
+.error-msg {
+  font-size: 12px;
+  color: #EF4444;
+}
+
+.form-error {
+  font-size: 14px;
+  color: #EF4444;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .submit-btn {
   width: 100%;
   justify-content: center;
   margin-top: 4px;
-}
 
-.calendly-wrapper {
-  display: flex;
-  align-items: flex-start;
-}
-
-.calendly-card {
-  width: 100%;
-  padding: 40px 32px;
-  border: 1.5px solid #E2E8F0;
-  border-radius: 16px;
-  background: #F8FAFC;
-  text-align: center;
-
-  .calendly-logo {
-    margin-bottom: 20px;
-
-    .cal-icon {
-      font-size: 40px;
-    }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
   }
-
-  h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #0F172A;
-    margin: 0 0 12px;
-    letter-spacing: -0.01em;
-  }
-
-  p {
-    font-size: 14px;
-    color: #64748B;
-    line-height: 1.65;
-    margin: 0 0 28px;
-  }
-}
-
-.calendly-btn {
-  width: 100%;
-  justify-content: center;
 }
 
 .success-message {

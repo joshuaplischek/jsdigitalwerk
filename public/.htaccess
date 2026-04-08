@@ -1,0 +1,13 @@
+# Angular SPA — alle Routen auf index.html umleiten
+Options -MultiViews
+RewriteEngine On
+
+# PHP-Kontaktformular direkt durchlassen
+RewriteRule ^contact\.php$ - [L]
+
+# Existierende Dateien/Verzeichnisse nicht umleiten
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Alles andere → index.html (Angular Router)
+RewriteRule ^ index.html [L]

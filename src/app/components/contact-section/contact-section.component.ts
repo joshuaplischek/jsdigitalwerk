@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.directive';
 
 @Component({
@@ -12,19 +13,39 @@ import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.d
 export class ContactSectionComponent {
   contactForm: FormGroup;
   submitted = false;
+  sending = signal(false);
+  error = signal('');
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      name:    ['', Validators.required],
+      email:   ['', [Validators.required, Validators.email]],
       telefon: [''],
-      projektdetails: ['', Validators.required]
+      message: ['', Validators.required]
     });
   }
 
+  isInvalid(field: string): boolean {
+    const c = this.contactForm.get(field);
+    return !!(c && c.invalid && c.touched);
+  }
+
   onSubmit() {
-    if (this.contactForm.valid) {
-      this.submitted = true;
-    }
+    this.contactForm.markAllAsTouched();
+    if (this.contactForm.invalid) return;
+
+    this.sending.set(true);
+    this.error.set('');
+
+    this.http.post<{ success: boolean }>('/contact.php', this.contactForm.value).subscribe({
+      next: () => {
+        this.sending.set(false);
+        this.submitted = true;
+      },
+      error: () => {
+        this.sending.set(false);
+        this.error.set('Beim Senden ist ein Fehler aufgetreten. Bitte versucht es erneut oder schreibt uns direkt eine E-Mail.');
+      }
+    });
   }
 }
