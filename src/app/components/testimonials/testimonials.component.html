@@ -11,7 +11,13 @@
           <div class="stars">★★★★★</div>
           <p class="quote">"{{ t.quote }}"</p>
           <div class="author">
-            <div class="avatar">{{ t.initials }}</div>
+            <div class="avatar" [class.has-photo]="t.photo">
+              @if (t.photo) {
+                <img [src]="t.photo" [alt]="t.name">
+              } @else {
+                {{ t.initials }}
+              }
+            </div>
             <div class="author-info">
               <div class="author-name">{{ t.name }}</div>
               <div class="author-role">{{ t.role }}, {{ t.company }}</div>

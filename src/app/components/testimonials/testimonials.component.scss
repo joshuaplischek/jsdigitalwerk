@@ -85,6 +85,18 @@
   font-weight: 700;
   font-size: 14px;
   flex-shrink: 0;
+  overflow: hidden;
+
+  &.has-photo {
+    background: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 
 .author-name {

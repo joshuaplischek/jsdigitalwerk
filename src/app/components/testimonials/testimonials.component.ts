@@ -11,11 +11,12 @@ import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.d
 export class TestimonialsComponent {
   testimonials = [
     {
-      quote: 'JS Digitalwerk hat unsere Website komplett neu aufgebaut. Seitdem haben wir deutlich mehr Anfragen über die Website. Absolute Empfehlung!',
-      name: 'Klaus Müller',
+      quote: 'Super Sache, funktioniert hervorragend. Lässt sich eigentlich der Satz „Ich bin absolut und vollumfänglich begeistert" noch steigern? Glaube nicht – Echt Weltklasse!',
+      name: 'Guido Plischek',
       role: 'Geschäftsführer',
-      company: 'Müller Sanitär GmbH',
-      initials: 'KM'
+      company: 'GP Brandschutz',
+      initials: 'GP',
+      photo: 'assets/img/customers/Guido Plischek.jpeg'
     },
     {
       quote: 'Professionelle Arbeit, schnelle Umsetzung und immer erreichbar wenn man Fragen hat. Das neue Logo ist einfach perfekt geworden.',

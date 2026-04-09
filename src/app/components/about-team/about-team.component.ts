@@ -11,6 +11,7 @@ import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.d
 export class AboutTeamComponent {
   team = [
     {
+      photo: 'assets/img/profile/Joshua Plischek.png',
       initials: 'JP',
       name: 'Joshua Plischek',
       role: 'Entwicklung & Design',
@@ -19,6 +20,7 @@ export class AboutTeamComponent {
       fact: 'Baut nachts Webapps, tagsüber Ideen.'
     },
     {
+      photo: 'assets/img/profile/Simeon Gießbrecht.jpeg',
       initials: 'SG',
       name: 'Simeon Gießbrecht',
       role: 'Akquise & Marketing',

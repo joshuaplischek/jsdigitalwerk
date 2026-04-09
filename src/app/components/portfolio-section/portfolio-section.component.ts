@@ -13,13 +13,14 @@ export class PortfolioSectionComponent {
 
   projects = [
     {
-      title: 'Brandschutz Schräder',
+      title: 'GP Brandschutz',
       tags: ['Webdesign', 'Lokales SEO'],
-      description: 'Neuer Webauftritt für ein Familienunternehmen mit über 45 Jahren Erfahrung im Brandschutz. Klare Struktur, modernes Design und Fokus auf lokale Sichtbarkeit.',
-      result: 'Erste Anfragen nach einer Woche – ohne Werbung.',
-      url: 'https://brandschutzschraeder.de/',
-      domain: 'brandschutzschraeder.de',
-      initial: 'B',
+      description: 'GP Brandschutz verfügte zuvor über keinerlei digitale Präsenz. Wir haben das Unternehmen von Grund auf in die digitale Welt geführt – mit einem professionellen Webauftritt, der Vertrauen schafft und lokal sichtbar macht.',
+      result: 'Erstmals online präsent – professionell und gefunden.',
+      url: 'https://gp-brandschutz.de',
+      domain: 'gp-brandschutz.de',
+      screenshot: 'assets/img/references/gp-3.png',
+      initial: 'G',
       color: '#DC2626'
     },
     {

@@ -13,13 +13,17 @@
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
             <div class="url-bar">{{ current.domain }}</div>
           </div>
-          <div class="mockup-content" [style.background]="'linear-gradient(135deg, ' + current.color + '22, ' + current.color + '11)'">
-            <div class="mockup-logo" [style.background]="current.color">{{ current.initial }}</div>
-            <div class="mockup-lines">
-              <div class="mockup-line wide"></div>
-              <div class="mockup-line medium"></div>
-              <div class="mockup-line short"></div>
-            </div>
+          <div class="mockup-content" [style.background]="current.screenshot ? 'transparent' : 'linear-gradient(135deg, ' + current.color + '22, ' + current.color + '11)'">
+            @if (current.screenshot) {
+              <img class="screenshot-img" [src]="current.screenshot" [alt]="current.title">
+            } @else {
+              <div class="mockup-logo" [style.background]="current.color">{{ current.initial }}</div>
+              <div class="mockup-lines">
+                <div class="mockup-line wide"></div>
+                <div class="mockup-line medium"></div>
+                <div class="mockup-line short"></div>
+              </div>
+            }
           </div>
         </div>
 

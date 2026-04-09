@@ -8,7 +8,9 @@
     <div class="team-grid">
       @for (member of team; track member.name; let i = $index) {
         <div class="team-card" appScrollAnimate [animationDelay]="(i * 150) + 'ms'">
-          <div class="avatar">{{ member.initials }}</div>
+          <div class="avatar">
+            <img [src]="member.photo" [alt]="member.name">
+          </div>
           <h3>{{ member.name }}</h3>
           <div class="role-badge">{{ member.role }}</div>
           <div class="tags">
