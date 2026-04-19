@@ -2,11 +2,35 @@
   <div class="container">
     <div class="section-header" appScrollAnimate>
       <h2>Über uns</h2>
-      <p>Zwei Gründer, eine Mission: Handwerksbetriebe ins digitale Zeitalter bringen – ehrlich, persönlich und ohne Agentur-Blabla.</p>
+      <p>Drei Gründer, eine Mission: Handwerksbetriebe ins digitale Zeitalter bringen – ehrlich, persönlich und ohne Agentur-Blabla.</p>
+    </div>
+
+    <div class="team-grid team-grid--solo">
+      <div class="team-card" appScrollAnimate>
+        <div class="avatar">
+          <img [src]="management.photo" [alt]="management.name">
+        </div>
+        <h3>{{ management.name }}</h3>
+        <div class="role-badge">{{ management.role }}</div>
+        <div class="tags">
+          @for (tag of management.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+          }
+        </div>
+        <p class="bio">{{ management.bio }}</p>
+        <div class="fact-row">
+          <span class="fact-icon">💡</span>
+          <span class="fact-text">{{ management.fact }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dev-team-header" appScrollAnimate>
+      <h3>Das Entwickler-Team</h3>
     </div>
 
     <div class="team-grid">
-      @for (member of team; track member.name; let i = $index) {
+      @for (member of devTeam; track member.name; let i = $index) {
         <div class="team-card" appScrollAnimate [animationDelay]="(i * 150) + 'ms'">
           <div class="avatar">
             <img [src]="member.photo" [alt]="member.name">
