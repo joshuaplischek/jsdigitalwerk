@@ -1,0 +1,63 @@
+<app-navigation />
+
+<main class="referenzen-page">
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <span class="page-label" appScrollAnimate>Unsere Arbeit</span>
+      <h1 appScrollAnimate animationDelay="80ms">Referenzen</h1>
+      <p appScrollAnimate animationDelay="160ms">Echte Projekte, echte Ergebnisse – ein Blick auf die Arbeit, die wir für Handwerksbetriebe geleistet haben.</p>
+    </div>
+  </div>
+
+  <div class="projects-list">
+    @for (project of projects; track project.title; let i = $index) {
+      <div class="project-entry" [class.reverse]="i % 2 !== 0">
+
+        <a [href]="project.url" target="_blank" rel="noopener"
+           class="entry-visual"
+           appScrollAnimate
+           [animationDirection]="i % 2 === 0 ? 'left' : 'right'">
+          <div class="mockup-screen">
+            <div class="browser-bar">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <div class="url-bar">{{ project.domain }}</div>
+            </div>
+            <div class="mockup-content"
+                 [style.background]="project.screenshot ? 'transparent' : 'linear-gradient(135deg, ' + project.color + '22, ' + project.color + '11)'">
+              @if (project.screenshot) {
+                <img class="screenshot-img" [src]="project.screenshot" [alt]="project.title">
+              } @else {
+                <div class="mockup-logo" [style.background]="project.color">{{ project.initial }}</div>
+                <div class="mockup-lines">
+                  <div class="mockup-line wide"></div>
+                  <div class="mockup-line medium"></div>
+                  <div class="mockup-line short"></div>
+                </div>
+              }
+            </div>
+          </div>
+        </a>
+
+        <div class="entry-info">
+          <div class="project-tags" appScrollAnimate animationDelay="150ms">
+            @for (tag of project.tags; track tag) {
+              <span class="tag">{{ tag }}</span>
+            }
+          </div>
+          <h2 appScrollAnimate animationDelay="200ms">{{ project.title }}</h2>
+          <p appScrollAnimate animationDelay="250ms">{{ project.description }}</p>
+          <p class="result-text" appScrollAnimate animationDelay="300ms">✓ {{ project.result }}</p>
+          <a [href]="project.url" target="_blank" rel="noopener"
+             class="visit-link" appScrollAnimate animationDelay="350ms">
+            {{ project.domain }} →
+          </a>
+        </div>
+
+      </div>
+    }
+  </div>
+
+</main>
+
+<app-footer />

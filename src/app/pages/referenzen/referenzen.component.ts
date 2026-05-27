@@ -1,17 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavigationComponent } from '../../components/navigation/navigation.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.directive';
 
 @Component({
-  selector: 'app-portfolio-section',
+  selector: 'app-referenzen',
   standalone: true,
-  imports: [ScrollAnimateDirective, RouterLink],
-  templateUrl: './portfolio-section.component.html',
-  styleUrls: ['./portfolio-section.component.scss']
+  imports: [NavigationComponent, FooterComponent, ScrollAnimateDirective],
+  templateUrl: './referenzen.component.html',
+  styleUrls: ['./referenzen.component.scss']
 })
-export class PortfolioSectionComponent {
-  currentIndex = signal(0);
-
+export class ReferenzenComponent {
   projects = [
     {
       title: 'GP Brandschutz',
@@ -45,16 +44,4 @@ export class PortfolioSectionComponent {
       color: '#0D9488'
     }
   ];
-
-  get current() {
-    return this.projects[this.currentIndex()];
-  }
-
-  prev() {
-    this.currentIndex.update(i => (i - 1 + this.projects.length) % this.projects.length);
-  }
-
-  next() {
-    this.currentIndex.update(i => (i + 1) % this.projects.length);
-  }
 }

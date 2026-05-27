@@ -220,6 +220,18 @@
 .dots {
   display: flex;
   gap: 8px;
+  margin-bottom: 20px;
+}
+
+.all-refs-link {
+  display: inline-block;
+  color: #4338CA;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover { color: #0D9488; }
 }
 
 .dot-btn {

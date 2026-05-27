@@ -1,11 +1,11 @@
 import { Component, HostListener, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
@@ -29,8 +29,12 @@ export class NavigationComponent {
   }
 
   scrollTo(sectionId: string) {
-    const el = document.getElementById(sectionId);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (this.router.url === '/' || this.router.url.startsWith('/#')) {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      this.router.navigate(['/'], { fragment: sectionId });
+    }
     this.isMobileMenuOpen.set(false);
   }
 }

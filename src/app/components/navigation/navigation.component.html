@@ -9,7 +9,7 @@
     <!-- Desktop Nav Links -->
     <div class="nav-links">
       <button (click)="scrollTo('leistungen')">Leistungen</button>
-      <button (click)="scrollTo('referenzen')">Referenzen</button>
+      <a routerLink="/referenzen" class="nav-link">Referenzen</a>
       <button (click)="scrollTo('ueber-uns')">Über uns</button>
       <button (click)="scrollTo('faq')">FAQ</button>
     </div>
@@ -29,7 +29,7 @@
   @if (isMobileMenuOpen()) {
     <div class="mobile-menu">
       <button (click)="scrollTo('leistungen')">Leistungen</button>
-      <button (click)="scrollTo('referenzen')">Referenzen</button>
+      <a routerLink="/referenzen" class="nav-link">Referenzen</a>
       <button (click)="scrollTo('ueber-uns')">Über uns</button>
       <button (click)="scrollTo('faq')">FAQ</button>
       <button class="btn-primary" (click)="scrollTo('kontakt')">Projekt starten</button>
