@@ -1,4 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChildren, QueryList, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.directive';
 
 @Component({
@@ -9,6 +10,8 @@ import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.d
   styleUrls: ['./stats-counter.component.scss']
 })
 export class StatsCounterComponent implements OnInit {
+  private platformId = inject(PLATFORM_ID);
+
   stats = [
     { prefix: '', value: 10, suffix: '+', label: 'Projekte umgesetzt' },
     { prefix: '', value: 100, suffix: '%', label: 'Kundenzufriedenheit' },
@@ -19,7 +22,8 @@ export class StatsCounterComponent implements OnInit {
   displayValues: string[] = [];
 
   ngOnInit() {
-    this.displayValues = this.stats.map(s => s.prefix + '0' + s.suffix);
+    this.displayValues = this.stats.map(s => s.prefix + s.value + s.suffix);
+    if (!isPlatformBrowser(this.platformId)) return;
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {

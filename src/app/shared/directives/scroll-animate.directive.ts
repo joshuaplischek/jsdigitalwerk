@@ -1,4 +1,5 @@
-import { Directive, ElementRef, OnInit, Input } from '@angular/core';
+import { Directive, ElementRef, OnInit, Input, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: '[appScrollAnimate]',
@@ -7,6 +8,8 @@ import { Directive, ElementRef, OnInit, Input } from '@angular/core';
 export class ScrollAnimateDirective implements OnInit {
   @Input() animationDelay = '0ms';
   @Input() animationDirection: 'up' | 'left' | 'right' = 'up';
+
+  private platformId = inject(PLATFORM_ID);
 
   constructor(private el: ElementRef) {}
 
@@ -17,6 +20,8 @@ export class ScrollAnimateDirective implements OnInit {
   }
 
   ngOnInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
+
     const element = this.el.nativeElement;
     element.style.opacity = '0';
     element.style.transform = this.initialTransform;

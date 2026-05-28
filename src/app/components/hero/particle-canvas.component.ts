@@ -5,8 +5,11 @@ import {
   AfterViewInit,
   OnDestroy,
   HostListener,
-  Input
+  Input,
+  inject,
+  PLATFORM_ID
 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 interface Particle {
   x: number;
@@ -38,6 +41,7 @@ export class ParticleCanvasComponent implements AfterViewInit, OnDestroy {
   @Input() mouseRadius = 200;
   @Input() particleDensity = 9000;
 
+  private platformId = inject(PLATFORM_ID);
   private ctx!: CanvasRenderingContext2D;
   private particles: Particle[] = [];
   private mouse = { x: null as number | null, y: null as number | null };
@@ -46,6 +50,7 @@ export class ParticleCanvasComponent implements AfterViewInit, OnDestroy {
   private dpr = 1;
 
   ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     const canvas = this.canvasRef.nativeElement;
     this.ctx = canvas.getContext('2d')!;
     this.setupCanvas();
@@ -60,7 +65,9 @@ export class ParticleCanvasComponent implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    cancelAnimationFrame(this.animationFrameId);
+    if (isPlatformBrowser(this.platformId)) {
+      cancelAnimationFrame(this.animationFrameId);
+    }
     this.resizeObserver?.disconnect();
   }
 
