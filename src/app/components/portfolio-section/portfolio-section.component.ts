@@ -31,6 +31,7 @@ export class PortfolioSectionComponent {
       result: 'Deutlich bessere Anfragen, mehr Aufträge über Online-Kontakt.',
       url: 'https://www.schoenenbach-steinteppich.de/',
       domain: 'schoenenbach-steinteppich.de',
+      screenshot: 'assets/img/references/schoenenbach-steinteppich.png',
       initial: 'S',
       color: '#4338CA'
     },
@@ -41,6 +42,7 @@ export class PortfolioSectionComponent {
       result: 'Starker erster Eindruck trotz Neugründung.',
       url: 'https://febrix-projekt.de/',
       domain: 'febrix-projekt.de',
+      screenshot: 'assets/img/references/febrix-projekt.png',
       initial: 'F',
       color: '#0D9488'
     },
@@ -51,6 +53,7 @@ export class PortfolioSectionComponent {
       result: 'Professionelle digitale Visitenkarte für ein wachsendes IT-Unternehmen.',
       url: 'https://msolnext.de/',
       domain: 'msolnext.de',
+      screenshot: 'assets/img/references/msolnext.png',
       initial: 'M',
       color: '#6366F1'
     },
@@ -61,6 +64,7 @@ export class PortfolioSectionComponent {
       result: 'Mehr qualifizierte Anfragen aus der Region.',
       url: 'https://www.cncopti.de/',
       domain: 'cncopti.de',
+      screenshot: 'assets/img/references/cnc-opti.png',
       initial: 'C',
       color: '#F59E0B'
     },
@@ -71,6 +75,7 @@ export class PortfolioSectionComponent {
       result: 'Neue Kundenanfragen über die Website, lokale Sichtbarkeit deutlich verbessert.',
       url: 'https://brandschutzschraeder.de/',
       domain: 'brandschutzschraeder.de',
+      screenshot: 'assets/img/references/brandschutz-schraeder.png',
       initial: 'B',
       color: '#B45309'
     },
@@ -81,6 +86,7 @@ export class PortfolioSectionComponent {
       result: 'Klarer Informationsauftritt, der Vertrauen schafft und Besucher zu Kunden macht.',
       url: 'https://versichert-wissen.de/',
       domain: 'versichert-wissen.de',
+      screenshot: 'assets/img/references/versichert-wissen.png',
       initial: 'V',
       color: '#0EA5E9'
     },
@@ -91,6 +97,7 @@ export class PortfolioSectionComponent {
       result: 'Überzeugender Markenauftritt für den deutschsprachigen und internationalen Markt.',
       url: 'https://planttech.ch/',
       domain: 'planttech.ch',
+      screenshot: 'assets/img/references/planttech.png',
       initial: 'P',
       color: '#22C55E'
     },
@@ -101,6 +108,7 @@ export class PortfolioSectionComponent {
       result: 'Mehr Online-Anmeldungen und stärkere lokale Sichtbarkeit.',
       url: 'https://www.wellzone-hammsieg.de/',
       domain: 'wellzone-hammsieg.de',
+      screenshot: 'assets/img/references/wellzone-hammsieg.png',
       initial: 'W',
       color: '#EC4899'
     },
@@ -111,6 +119,7 @@ export class PortfolioSectionComponent {
       result: 'Deutlich mehr Anfragen und Mitgliedschaften über die Website.',
       url: 'https://www.vitalzone-hammsieg.de/',
       domain: 'vitalzone-hammsieg.de',
+      screenshot: 'assets/img/references/vitalzone-hammsieg.png',
       initial: 'V',
       color: '#8B5CF6'
     },
@@ -121,6 +130,7 @@ export class PortfolioSectionComponent {
       result: 'Starke lokale Präsenz und mehr Neukunden aus dem Einzugsgebiet.',
       url: 'https://www.vitalzone-hillesheim.de/',
       domain: 'vitalzone-hillesheim.de',
+      screenshot: 'assets/img/references/vitalzone-hillesheim.png',
       initial: 'V',
       color: '#7C3AED'
     },
@@ -131,6 +141,7 @@ export class PortfolioSectionComponent {
       result: 'Professionelle Kettenpräsenz mit klarer Markenidentität.',
       url: 'https://vitalzone-studios.de/',
       domain: 'vitalzone-studios.de',
+      screenshot: 'assets/img/references/vitalzone-studios.png',
       initial: 'V',
       color: '#0891B2'
     }
