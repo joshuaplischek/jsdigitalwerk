@@ -27,13 +27,20 @@ export class ScrollAnimateDirective implements OnInit {
     element.style.transform = this.initialTransform;
     element.style.transition = `opacity 0.6s ease ${this.animationDelay}, transform 0.6s ease ${this.animationDelay}`;
 
+    const enterTransition = `opacity 0.6s ease ${this.animationDelay}, transform 0.6s ease ${this.animationDelay}`;
+    const exitTransition  = `opacity 0.4s ease 0ms, transform 0.4s ease 0ms`;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
+            element.style.transition = enterTransition;
             element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-            observer.unobserve(element);
+            element.style.transform = 'none';
+          } else {
+            element.style.transition = exitTransition;
+            element.style.opacity = '0';
+            element.style.transform = this.initialTransform;
           }
         });
       },

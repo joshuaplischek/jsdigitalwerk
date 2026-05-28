@@ -43,6 +43,96 @@ export class PortfolioSectionComponent {
       domain: 'febrix-projekt.de',
       initial: 'F',
       color: '#0D9488'
+    },
+    {
+      title: 'MsolNext',
+      tags: ['Webdesign', 'Branding'],
+      description: 'Moderner Webauftritt für ein IT-Dienstleistungsunternehmen. Klare Struktur, professionelle Außenwirkung und ein Design, das Kompetenz auf den ersten Blick vermittelt.',
+      result: 'Professionelle digitale Visitenkarte für ein wachsendes IT-Unternehmen.',
+      url: 'https://msolnext.de/',
+      domain: 'msolnext.de',
+      initial: 'M',
+      color: '#6366F1'
+    },
+    {
+      title: 'CNC Opti',
+      tags: ['Webdesign', 'Lokales SEO'],
+      description: 'Website für einen CNC-Fachbetrieb mit Fokus auf präzise Leistungskommunikation. Technische Kompetenz wird verständlich und überzeugend präsentiert.',
+      result: 'Mehr qualifizierte Anfragen aus der Region.',
+      url: 'https://www.cncopti.de/',
+      domain: 'cncopti.de',
+      initial: 'C',
+      color: '#F59E0B'
+    },
+    {
+      title: 'Brandschutz Schräder',
+      tags: ['Webdesign', 'Lokales SEO'],
+      description: 'Webauftritt für einen Brandschutz-Fachbetrieb. Vertrauen und Zuverlässigkeit stehen im Mittelpunkt – mit klarer Darstellung der Leistungen und einfacher Kontaktmöglichkeit.',
+      result: 'Neue Kundenanfragen über die Website, lokale Sichtbarkeit deutlich verbessert.',
+      url: 'https://brandschutzschraeder.de/',
+      domain: 'brandschutzschraeder.de',
+      initial: 'B',
+      color: '#B45309'
+    },
+    {
+      title: 'Versichert Wissen',
+      tags: ['Webdesign', 'Content'],
+      description: 'Informationsplattform rund um das Thema Versicherungen. Komplexe Inhalte werden verständlich aufbereitet – übersichtlich, vertrauenswürdig und nutzerzentriert gestaltet.',
+      result: 'Klarer Informationsauftritt, der Vertrauen schafft und Besucher zu Kunden macht.',
+      url: 'https://versichert-wissen.de/',
+      domain: 'versichert-wissen.de',
+      initial: 'V',
+      color: '#0EA5E9'
+    },
+    {
+      title: 'PlantTech',
+      tags: ['Webdesign', 'Branding'],
+      description: 'Professioneller Webauftritt für ein Schweizer Unternehmen im Bereich Pflanzentechnologie. Internationales Design, das Qualität und Innovationskraft widerspiegelt.',
+      result: 'Überzeugender Markenauftritt für den deutschsprachigen und internationalen Markt.',
+      url: 'https://planttech.ch/',
+      domain: 'planttech.ch',
+      initial: 'P',
+      color: '#22C55E'
+    },
+    {
+      title: 'Wellzone Hamm/Sieg',
+      tags: ['Webdesign', 'Conversion-Optimierung'],
+      description: 'Website für ein Wellness- und Fitnessstudio in Hamm/Sieg. Atmosphärisches Design, das Wohlbefinden ausstrahlt – und Interessenten direkt zur Mitgliedschaft führt.',
+      result: 'Mehr Online-Anmeldungen und stärkere lokale Sichtbarkeit.',
+      url: 'https://www.wellzone-hammsieg.de/',
+      domain: 'wellzone-hammsieg.de',
+      initial: 'W',
+      color: '#EC4899'
+    },
+    {
+      title: 'Vitalzone Hamm/Sieg',
+      tags: ['Webdesign', 'Lokales SEO'],
+      description: 'Webauftritt für ein Fitnessstudio in Hamm/Sieg. Motivierendes Design, das Energie vermittelt und neue Mitglieder anspricht – direkt aus der Region.',
+      result: 'Deutlich mehr Anfragen und Mitgliedschaften über die Website.',
+      url: 'https://www.vitalzone-hammsieg.de/',
+      domain: 'vitalzone-hammsieg.de',
+      initial: 'V',
+      color: '#8B5CF6'
+    },
+    {
+      title: 'Vitalzone Hillesheim',
+      tags: ['Webdesign', 'Lokales SEO'],
+      description: 'Lokaler Fitnessauftritt für den Standort Hillesheim. Konsistentes Branding innerhalb der Vitalzone-Familie, angepasst an die regionale Zielgruppe.',
+      result: 'Starke lokale Präsenz und mehr Neukunden aus dem Einzugsgebiet.',
+      url: 'https://www.vitalzone-hillesheim.de/',
+      domain: 'vitalzone-hillesheim.de',
+      initial: 'V',
+      color: '#7C3AED'
+    },
+    {
+      title: 'Vitalzone Studios',
+      tags: ['Webdesign', 'Branding'],
+      description: 'Übergreifende Markenpräsenz für die gesamte Vitalzone-Studiokette. Ein einheitlicher Webauftritt, der alle Standorte unter einem starken Markendach vereint.',
+      result: 'Professionelle Kettenpräsenz mit klarer Markenidentität.',
+      url: 'https://vitalzone-studios.de/',
+      domain: 'vitalzone-studios.de',
+      initial: 'V',
+      color: '#0891B2'
     }
   ];
 
