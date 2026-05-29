@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/common';
 import { NavigationComponent } from '../../components/navigation/navigation.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.directive';
@@ -11,6 +13,18 @@ import { ScrollAnimateDirective } from '../../shared/directives/scroll-animate.d
   styleUrls: ['./referenzen.component.scss']
 })
 export class ReferenzenComponent {
+  private title = inject(Title);
+  private meta = inject(Meta);
+  private doc = inject(DOCUMENT);
+
+  constructor() {
+    this.title.setTitle('Referenzen – JS Digitalwerk');
+    this.meta.updateTag({ name: 'description', content: 'Echte Projekte für Handwerksbetriebe: Webdesign, SEO und digitale Sichtbarkeit. Alle Referenzen von JS Digitalwerk auf einen Blick.' });
+    this.meta.updateTag({ property: 'og:title', content: 'Referenzen – JS Digitalwerk' });
+    this.meta.updateTag({ property: 'og:url', content: 'https://jsdigitalwerk.de/referenzen' });
+    const canonical = this.doc.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', 'https://jsdigitalwerk.de/referenzen');
+  }
   projects = [
     {
       title: 'GP Brandschutz',
